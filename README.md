@@ -47,7 +47,6 @@ The Counter Game is built with a clear separation of concerns between the fronte
 ### Requirements
 
 - Node.js
-- MongoDB (local installation or cloud version like MongoDB Atlas)
 
 ### Quickstart
 
@@ -62,24 +61,12 @@ The Counter Game is built with a clear separation of concerns between the fronte
     npm install
     ```
 
-3. **Set up environment variables**:
-    - Copy the `.env.example` file to `.env`:
-        ```sh
-        cp .env.example .env
-        ```
-    - Fill in the required values in the `.env` file:
-        ```sh
-        PORT=3000
-        DATABASE_URL=<your_mongodb_connection_string>
-        SESSION_SECRET=<your_session_secret>
-        ```
-
-4. **Start the server**:
+3. **Start the server**:
     ```sh
     npm start
     ```
 
-5. **Access the game**:
+4. **Access the game**:
     - Open your web browser and go to `http://localhost:3000`
 
 ### License

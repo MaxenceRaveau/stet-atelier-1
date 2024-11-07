@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/_head.ejs') %>
+  <body>
+<%- include('partials/_header.ejs') %>
+    <main role="main" class="container mt-4">
+      <div class="text-center">
+        <h1>Game Rules</h1>
+        <p>
+          Objective
+          <br>
+          Players compete to keep their assigned color (Red or Green) from turning black as much as possible. The player with the least time in black wins.
+          <br><br>
+          Each player has an assigned key:
+          <br>
+          Player 1: Press Q to respond when your rectangle turns black.
+          <br>
+          Player 2: Press M to respond when your rectangle turns black.
+          <br><br>
+          When a player’s rectangle turns black, they should press their key as quickly as possible to switch the black color to their opponent’s side.
+          <br>
+          Timing is crucial: the faster you press, the less time you spend in black!
+          <br><br>
+          Game Over Condition
+          <br>
+          Penalty for Mistake: If a player presses their key when their rectangle is not black, they instantly lose, resulting in an automatic defeat.
+          <br><br>
+          A countdown from 3... 2... 1 will signal the start of the game.
+        </p>
+        <div id="countdown" class="mt-4">
+          <h2>Starting in <span id="countdown-timer">10</span> seconds...</h2>
+        </div>
+      </div>
+    </main>
+    <script src="/js/rules.js"></script>
+  </body>
+<%- include('partials/_footer.ejs') %>
+</html>

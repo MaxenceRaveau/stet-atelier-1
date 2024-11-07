@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/_head.ejs') %>
+  <body>
+<%- include('partials/_header.ejs') %>
+    <main role="main" class="container">
+      <div class="end-game-screen" style="background-color: grey; padding: 20px; border-radius: 10px; text-align: center;">
+        <h2><%= winnerMessage %></h2>
+        <p>Player 1: <%= player1BlackTime %> sec</p>
+        <p>Player 2: <%= player2BlackTime %> sec</p>
+        <!-- Add Play Again Button -->
+        <button id="play-again-end-button" class="btn btn-primary">Play Again</button>
+      </div>
+    </main>
+<%- include('partials/_footer.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+/* public/css/style.css */
+
+/* Ensure the body takes up the full viewport height and prevents scrolling */
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+footer {
+    height: 40px;
+}
+
+nav.navbar {
+    padding: 10px 20px;
+    background-color: black; /* Change header color to black */
+}
+
+.pythagora-logo {
+    height: 20px;
+    margin-left: 5px;
+}
+
+#game-container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 40px); /* Subtract the height of the footer */
+}
+
+#player1, #player2 {
+    flex: 1;
+    height: 100%;
+}
+
+/* New styles for countdown popup */
+.countdown-popup {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.countdown-timer {
+  font-size: 5rem;
+  color: white;
+}
+
+.timer-display {
+  color: white;
+  font-weight: bold;
+  font-size: 2em; /* Adjust the size as needed */
+}
+
+/* Add styles for the life counters */
+.life-counter {
+  position: absolute;
+  top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+#player1-lives {
+  left: 25%;
+  transform: translateX(-50%);
+}
+
+#player2-lives {
+  right: 25%;
+  transform: translateX(50%);
+}
+
+/* Style for heart icons */
+.heart {
+  color: blue;
+  font-size: 24px;
+  margin: 0 2px;
+}
+
+/* Center and style the defeat popup */
+.defeat-popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.defeat-message {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Add styles for the end game popup */
+/* Add styles for the end game popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(128, 128, 128, 0.9);
+  /* Grey background */
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1000;
+  /* Ensure it's in front of other elements */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}

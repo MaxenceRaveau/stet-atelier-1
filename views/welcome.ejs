@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/_head.ejs') %>
+  <body>
+<%- include('partials/_header.ejs') %>
+    <main role="main" class="container mt-4">
+      <div class="text-center">
+        <h1>Welcome to The Counter Game</h1>
+        <div class="btn-group mt-4" role="group" aria-label="Game Duration">
+          <button type="button" class="btn btn-outline-primary" id="duration-15">15s</button>
+          <button type="button" class="btn btn-outline-primary" id="duration-30">30s</button>
+          <button type="button" class="btn btn-outline-primary" id="duration-60">1 min</button>
+        </div>
+        <div class="mt-4">
+          <button type="button" class="btn btn-success" id="play-button">Play</button>
+        </div>
+      </div>
+    </main>
+  </body>
+<%- include('partials/_footer.ejs') %>
+  <script src="/js/main.js"></script>
+</html>

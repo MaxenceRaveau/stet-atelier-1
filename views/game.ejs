@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/_head.ejs') %>
+
+  <body>
+    <%- include('partials/_header.ejs') %>
+      <main role="main" class="container-fluid p-0">
+        <div id="game-container">
+          <div id="countdown-popup" class="countdown-popup">
+            <div id="countdown-timer" class="countdown-timer"></div>
+          </div>
+          <!-- Add a new div for displaying the remaining game time -->
+          <div id="remaining-time" class="timer-display"
+            style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%);">0.00</div>
+          <!-- Add life counters for Player 1 and Player 2 using heart icons -->
+          <div id="player1-lives" class="life-counter">
+            <span class="heart">&#10084;</span>
+            <span class="heart">&#10084;</span>
+            <span class="heart">&#10084;</span>
+          </div>
+          <div id="player2-lives" class="life-counter">
+            <span class="heart">&#10084;</span>
+            <span class="heart">&#10084;</span>
+            <span class="heart">&#10084;</span>
+          </div>
+          <div id="player1" class="player" style="background-color: red;">
+            <div id="player1-timer" class="player-timer timer-display">0.00</div>
+          </div>
+          <div id="player2" class="player" style="background-color: green;">
+            <div id="player2-timer" class="player-timer timer-display">0.00</div>
+          </div>
+          <!-- Defeat popup structure -->
+          <div id="defeat-popup" class="defeat-popup">
+            <div id="defeat-message" class="defeat-message"></div>
+            <button id="play-again-button" class="btn btn-primary">Play Again</button>
+          </div>
+          <!-- Add end game popup -->
+          <div id="end-game-popup" class="popup">
+            <p>Player 1 <br><span id="player1-end-time"></span> </p>
+            <p>Player 2 <br><span id="player2-end-time"></span></p>
+            <h2 id="winner-message"></h2>
+            <button id="play-again-end-button" class="btn btn-primary">Play Again</button>
+          </div>
+        </div>
+      </main>
+      <script>
+        const gameDuration = <%= gameDuration %>;
+      </script>
+      <script src="/js/game.js"></script>
+  </body>
+  <%- include('partials/_footer.ejs') %>
+
+</html>
